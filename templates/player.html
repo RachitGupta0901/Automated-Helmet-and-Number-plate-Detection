@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Footage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        
+        h1 {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        #video-container {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+        }
+        
+        #video-stream {
+            border: 2px solid #333;
+            margin-top: 20px;
+        }
+        
+        #status-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Live recording system</h1>
+    <div id="video-container">
+        <img id="video-stream" src="{{ url_for('video_feed') }}" width="640" height="480">
+    </div>
+    <div id="status-container">
+        <p id="status">Status: Loading...</p>
+    </div>
+</body>
+</html>
